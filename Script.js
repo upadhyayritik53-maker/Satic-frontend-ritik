@@ -18,6 +18,7 @@ function createPrimaryButton(label, onClick, disabled = false) {
     // extra class not strictly required, but kept in case CSS uses it
     btn.classList.add('disabled');
   }
+  
 
   // Click handler
   btn.addEventListener('click', event => {
@@ -28,6 +29,20 @@ function createPrimaryButton(label, onClick, disabled = false) {
 
   return btn;
 }
+<script>
+  function handleSearch(event) {
+    event.preventDefault(); // page reload stop
+
+    const value = document.getElementById("searchInput").value.trim();
+
+    if (value === "") {
+      alert("Please enter something to search");
+      return;
+    }
+
+    alert("Searching for: " + value);
+  }
+</script>
 
 /**
  * Utility: enable or disable button later

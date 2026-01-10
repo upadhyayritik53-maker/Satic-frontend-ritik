@@ -1,96 +1,52 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
   font-family: Arial, sans-serif;
-}
-
-/* Navbar */
-.navbar {
-  height: 70px;                 /* Fixed height */
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  background: #f4f4f4;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
+  justify-content: center;
 }
 
-/* Logo */
-.logo {
-  font-size: 22px;
-  font-weight: bold;
+.search-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Navigation Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
-
-/* Active Link */
-.nav-links a.active {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 4px;
-}
-
-/* Buttons */
-.nav-buttons {
+form {
   display: flex;
   gap: 10px;
 }
 
-/* Primary Button */
-.primary-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-/* Search bar */
-.search-form {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.search-form input {
-  padding: 0.45rem 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
   outline: none;
 }
 
-/* Focus state (Requirement) */
-.search-form input:focus {
-  border-color: #1366d6;
-  box-shadow: 0 0 0 2px rgba(19, 102, 214, 0.2);
+/* Focus state */
+input:focus {
+  border-color: #007bff;
 }
 
-.search-form button {
-  padding: 0.45rem 0.7rem;
-  border: none;
-  border-radius: 6px;
-  background: #1366d6;
-  color: #fff;
+button {
+  padding: 10px 15px;
+  font-size: 16px;
   cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
-/* Disabled Button */
-.disabled-btn {
-  background-color: #cccccc;
-  color: #666;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  margin-top: 10px;
+  font-size: 14px;
+}

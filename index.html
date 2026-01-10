@@ -252,6 +252,15 @@
       // prevent page from scrolling on iOS (extra)
       document.addEventListener('touchmove', preventTouch, { passive: false });
     }
+    <form class="search-form" onsubmit="handleSearch(event)">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search..."
+    aria-label="Search"
+  />
+  <button type="submit">🔍</button>
+</form>
 
     function closeMenu() {
       body.classList.remove('menu-open');

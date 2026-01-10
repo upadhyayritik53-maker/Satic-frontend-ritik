@@ -57,6 +57,34 @@
   border-radius: 4px;
   cursor: pointer;
 }
+/* Search bar */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-form input {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Focus state (Requirement) */
+.search-form input:focus {
+  border-color: #1366d6;
+  box-shadow: 0 0 0 2px rgba(19, 102, 214, 0.2);
+}
+
+.search-form button {
+  padding: 0.45rem 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: #1366d6;
+  color: #fff;
+  cursor: pointer;
+}
 
 /* Disabled Button */
 .disabled-btn {

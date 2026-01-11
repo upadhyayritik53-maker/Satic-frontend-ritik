@@ -1,16 +1,17 @@
-const form = document.getElementById("searchForm");
-const input = document.getElementById("searchInput");
-const result = document.getElementById("result");
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // page reload stop
+function handleSearch(event) {
+  event.preventDefault();
 
-  const value = input.value.trim();
+  const value = document.getElementById("searchInput").value.trim();
 
   if (value === "") {
-    alert("Please enter something to search!");
+    alert("Please enter something to search");
     return;
   }
 
-  result.textContent = `You searched for: "${value}"`;
-});
+  alert("You searched for: " + value);
+}

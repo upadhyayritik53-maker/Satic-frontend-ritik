@@ -1,42 +1,35 @@
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+const cardsData = [
+  {
+    image: "https://picsum.photos/400/250?random=1",
+    title: "Card Title 1",
+    description: "This is a reusable card component with equal height."
+  },
+  {
+    image: "https://picsum.photos/400/250?random=2",
+    title: "Card Title 2",
+    description: "Cards are responsive and work on all screen sizes."
+  },
+  {
+    image: "https://picsum.photos/400/250?random=3",
+    title: "Card Title 3",
+    description: "Equal height cards using flexbox layout."
+  }
+];
 
-// Toggle menu
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+const container = document.querySelector(".card-container");
 
-  // Disable background scroll when menu is open
-  document.body.style.overflow =
-    navLinks.classList.contains("show") ? "hidden" : "auto";
+cardsData.forEach(card => {
+  const div = document.createElement("div");
+  div.className = "card";
+
+  div.innerHTML = `
+    <img class="card-img" src="${card.image}" alt="card image">
+    <div class="card-content">
+      <h3>${card.title}</h3>
+      <p>${card.description}</p>
+      <button>Read More</button>
+    </div>
+  `;
+
+  container.appendChild(div);
 });
-
-// Close menu when any link is clicked
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-    document.body.style.overflow = "auto";
-  });
-});
-
-
-// ==============================
-// SEARCH BAR FUNCTIONALITY
-// ==============================
-const searchForm = document.getElementById("searchForm");
-const searchInput = document.getElementById("searchInput");
-
-if (searchForm && searchInput) {
-  searchForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const value = searchInput.value.trim();
-
-    if (!value) {
-      alert("Please enter a search term");
-      searchInput.focus();
-      return;
-    }
-
-    alert("Searching for: " + value);
-  });
-}

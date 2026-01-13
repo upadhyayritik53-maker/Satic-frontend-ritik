@@ -1,2 +1,1 @@
-# Satic-frontend-ritik
-This repository contains frontend projects built during the Satic frontend internship, showcasing daily deployed work
+Add a notifications banner component and deploy it live 

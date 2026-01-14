@@ -1,3 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Internship Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	
+
+  <!--Day 3 & 4-->
+  <header class="navbar">
+    <div class="logo">LOGO</div>
+
+    <nav id="navMenu" class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Tasks</a>
+      <a href="#">Contact</a>
+      <button class="btn primary-btn">Login</button>
+    </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <main class="container">
+
+    <!--Day 2-->
+    <section>
+      <h2>Day 2 – Reusable Button</h2>
+      <button class="btn primary-btn">Primary Button</button>
+      <button class="btn primary-btn" disabled>Disabled Button</button>
+    </section>
+
+    <!--Day 5-->
+    <section>
+      <h2>Day 5 – Search Bar</h2>
+      <form class="Search-bar" onsubmit="handleSearch(event)">
+        <input type="text" placeholder="Search..." aria-label="Search" />
+        <button type="Submit">🔍</button>
+      </form>
+    </section>
+
+<!--Day 7-->
+  <div id="notification" class="notification hidden">
+  <span id="message"></span>
+  <button onclick="dismiss()">✖</button>
+</div>
+
+<div class="container">
+  <h2>Day 7 – Notification Banner</h2>
+  <button class="btn success-btn" onclick="showSuccess()">show success</button>
+  <button class="btn error-btn" onclick="showError()">show Error</button>
+</div>
+
+    <!--Day 6-->
+    <section>
+      <h2>Day 6 – Cards</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-img">
+		<img src="https://picsum.photos/400/250?random=1" alt="Card image">
+	</div>
+          <h3>Card Title</h3>
+          <p>This is a reusable card component.</p>
+          <button class="btn primary-btn">Action</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+	<img src="https://picsum.photos/400/250?random=2" alt="Card image">
+		</div>
+          <h3>Another Card</h3>
+          <p>Cards maintain equal height automatically.</p>
+          <button class="btn primary-btn">Action</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+	<img src="https://picsum.photos/400/250?random=3" alt="Card image">
+		
+	</div>
+          <h3>Responsive Card</h3>
+          <p>Layout adapts to screen size.</p>
+          <button class="btn primary-btn">Action</button>
+        </div>
+      </div>
+    </section>
 <!-- Day 8 -->
 <section>
   <h2>Day 8 - Form Input & Submit</h2>
@@ -24,4 +112,10 @@
       Submit
     </button>
   </form>
-</section>
+	  </section>
+  </main>
+
+  <script src="script.js"></script>
+	
+</body>
+      </html>
